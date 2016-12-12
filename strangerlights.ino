@@ -48,25 +48,28 @@ void setup(){
 }
 
 void loop(){
-
+   
+  FastLED.clear();
+  
   //for(int i = 0; i < NUM_LEDS; i++){
   for(int i = 0; i < (sizeof(word_letters)/sizeof(int)); i++){
-    FastLED.clear();
-
-    /*
+    
+    //delay(500);
+    
     int r = random(0, 2);
     int g = random(0, 2);
     int b = random(0, 2);
-    */
-
+    
+    /*
     int r = 1;
     int g = 0;
     int b = 0;
+    */
     
-    /*
-    if(r == 0){
+    if(r == 0 && g == 0 && b == 0){
       r = 1;
     }
+    /*
     if(g == 0){
       g = 1;
     }
@@ -77,10 +80,14 @@ void loop(){
     
     leds[word_letters[i]] = CRGB(r * 255,g * 255, b * 255);
     FastLED.show();
-    delay(1000);
+    delay(1600);
+    leds[word_letters[i]] = CRGB(0,0,0);
+    FastLED.show();
+    delay(500);
   }
-  
-  delay(10000);
+
+  FastLED.clear();
+  delay(5000);
  
   /*
   // fade-in
