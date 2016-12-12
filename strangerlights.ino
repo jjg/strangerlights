@@ -1,8 +1,37 @@
-
 #include <FastLED.h>
-#define DATA_PIN 6  //this is the data pin connected to the LED strip.  If using WS2801 you also need a clock pin
+#define DATA_PIN 6
 #define NUM_LEDS 50 //change this for the number of LEDs in the strip
 #define COLOR_ORDER RGB
+
+// light-to-letter mappings
+#define A_ 15
+#define B_ 13
+#define C_ 11
+#define D_ 9
+#define E_ 7
+#define F_ 5
+#define G_ 3
+#define H_ 1
+#define I_ 33
+#define J_ 31
+#define K_ 29
+#define L_ 27
+#define M_ 25
+#define N_ 23
+#define O_ 21
+#define P_ 19
+#define Q_ 16
+#define R_ 34
+#define S_ 36
+#define T_ 38
+#define U_ 40
+#define V_ 42
+#define W_ 44
+#define X_ 46
+#define Z_ 49
+#define SPACE_ 99
+
+int word_letters[] = {M_,E_,R_,R_,I_,SPACE_,C_,H_,R_,I_,S_,T_,M_,A_,S_};
 
 CRGB leds[NUM_LEDS]; 
 //I have a few additional integers in here from different tests. 
@@ -15,18 +44,24 @@ int t = 0;
 
 void setup(){
   FastLED.addLeds<WS2811, DATA_PIN, COLOR_ORDER>(leds, NUM_LEDS); //setting up the FastLED
-  randomSeed(analogRead(0)); //seeding my random numbers to make it more random.  If you just use the random function it will repeat the same pattern every time it is loaded.
+  randomSeed(analogRead(0));
 }
 
 void loop(){
 
-  // random colors
-  FastLED.clear();
-  
-  for(int i = 0; i < NUM_LEDS; i++){
+  //for(int i = 0; i < NUM_LEDS; i++){
+  for(int i = 0; i < (sizeof(word_letters)/sizeof(int)); i++){
+    FastLED.clear();
+
+    /*
     int r = random(0, 2);
     int g = random(0, 2);
     int b = random(0, 2);
+    */
+
+    int r = 1;
+    int g = 0;
+    int b = 0;
     
     /*
     if(r == 0){
@@ -40,9 +75,9 @@ void loop(){
     }
     */
     
-    leds[i] = CRGB(r * 255,g * 255, b * 255);
+    leds[word_letters[i]] = CRGB(r * 255,g * 255, b * 255);
     FastLED.show();
-    delay(100);
+    delay(1000);
   }
   
   delay(10000);
