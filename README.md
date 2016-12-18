@@ -1,5 +1,5 @@
 # STRANGERLIGHTS
-A holiday (or really, anyday) display based on the communication system used by the mother in the show Stranger Things.
+A holiday (or really, anyday) display based on the communication system used by Will to talk to his mother in the show [Stranger Things](https://en.wikipedia.org/wiki/Stranger_Things_%28TV_series%29).
 
 [![Strangerlights Demo Video](http://img.youtube.com/vi/_ogfhmmpy8w/0.jpg)](https://youtu.be/_ogfhmmpy8w)
 
