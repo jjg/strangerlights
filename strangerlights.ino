@@ -11,7 +11,7 @@
 #define E_ 7
 #define F_ 5
 #define G_ 3
-#define H_ 1
+#define H_ 0
 #define I_ 33
 #define J_ 31
 #define K_ 29
@@ -28,10 +28,10 @@
 #define V_ 42
 #define W_ 44
 #define X_ 46
-#define Z_ 49
+#define Y_ 49
 #define SPACE_ 99
 
-int word_letters[] = {M_,E_,R_,R_,I_,SPACE_,C_,H_,R_,I_,S_,T_,M_,A_,S_};
+int word_letters[] = {M_,E_,R_,R_,Y_,SPACE_,C_,H_,R_,I_,S_,T_,M_,A_,S_};
 
 CRGB leds[NUM_LEDS]; 
 //I have a few additional integers in here from different tests. 
@@ -77,13 +77,23 @@ void loop(){
       b = 1;
     }
     */
-    
-    leds[word_letters[i]] = CRGB(r * 255,g * 255, b * 255);
-    FastLED.show();
-    delay(1600);
-    leds[word_letters[i]] = CRGB(0,0,0);
-    FastLED.show();
-    delay(500);
+    if(word_letters[i] == SPACE_){
+      
+      // shorter delay
+      leds[word_letters[i]] = CRGB(0,0,0);
+      FastLED.show();
+      delay(500);
+      
+    } else {
+      
+      leds[word_letters[i]] = CRGB(r * 255,g * 255, b * 255);
+      FastLED.show();
+      delay(1000);
+      leds[word_letters[i]] = CRGB(0,0,0);
+      FastLED.show();
+      delay(500);
+      
+    }
   }
 
   FastLED.clear();
