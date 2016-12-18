@@ -1,6 +1,8 @@
 # STRANGERLIGHTS
 A holiday (or really, anyday) display based on the communication system used by the mother in the show Stranger Things.
 
+[![Strangerlights Demo Video](http://img.youtube.com/vi/_ogfhmmpy8w/0.jpg)](https://youtu.be/_ogfhmmpy8w)
+
 ## Requirements
 *  A string of WS2811 holiday lights (we used these: [http://amzn.to/2hJojRe](http://amzn.to/2hJojRe))
 *  An Arduino Uno or compatible ([http://amzn.to/2hJtwZo](http://amzn.to/2hJtwZo))
