@@ -6,7 +6,7 @@ A holiday (or really, anyday) display based on the communication system used by 
 Electronics inspired by this [Arduino Based Stranger Things Lights](http://www.instructables.com/id/Arduino-Based-Stranger-Things-Lights/) Instructable.
 
 ## Requirements
-*  A string of WS2811 holiday lights (we used these: [http://amzn.to/2hJojRe](http://amzn.to/2hJojRe))
+*  A string of 5V WS2811 holiday lights (we used these: [http://amzn.to/2hJojRe](http://amzn.to/2hJojRe))
 *  An Arduino Uno or compatible ([http://amzn.to/2hJtwZo](http://amzn.to/2hJtwZo))
 *  A power supply (most Arduinos are happy with 5-12VDC)
 *  A board to mount the lights (we used styrofoam, but anything big enough should work)
